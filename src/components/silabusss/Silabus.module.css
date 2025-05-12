@@ -1,0 +1,240 @@
+/* הגדרת פונטים */
+
+/* מכיל את כל הקומפוננטה */
+.container {
+  font-family: 'Assistant', sans-serif;
+
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 900px;
+  margin: 2% auto;
+  direction: rtl;
+  text-align: right;
+  border: 2px solid rgba(245, 184, 65, 0.3);
+}
+
+/* הדר עם כותרת ראשית */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(245, 184, 65, 0.3);
+}
+
+/* אייקון לוח שנה */
+.calendarIconWrapper {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: rgba(245, 184, 65, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* סרגל התקדמות */
+.progressBar {
+  position: relative;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  margin: 0 2rem 2rem;
+  overflow: visible;
+}
+
+
+
+.progressSteps {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progressStep {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background: rgba(245, 184, 65, 0.2);
+  border: 2px solid rgba(245, 184, 65, 0.6);
+  border-radius: 50%;
+  transform: translateY(-8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.progressStep:hover {
+  transform: translateY(-12px) scale(1.2);
+  background: rgba(245, 184, 65, 0.3);
+}
+
+.stepNumber {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #F5B841;
+}
+
+.mainTitle {
+  font-family: 'Assistant', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0 1rem;
+  text-align: center;
+  background: linear-gradient(90deg, #F5B841, #FFF3D6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* מכיל את כל הכרטיסים */
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  font-family: 'AssistantR', sans-serif;
+}
+
+/* עיצוב כרטיס מפגש בודד */
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(245, 184, 65, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.3), 0 0 15px rgba(245, 184, 65, 0.3);
+  border: 1px solid rgba(245, 184, 65, 0.4);
+}
+
+.card:hover .iconWrapper {
+  transform: scale(1.1);
+  background: rgba(245, 184, 65, 0.2);
+}
+
+/* תג מספר מפגש */
+.dayBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(245, 184, 65, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #F5B841;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(245, 184, 65, 0.3);
+}
+
+/* תוכן הכרטיס */
+.content {
+  display: flex;
+  gap: 1rem;
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: rgba(245, 184, 65, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textContent {
+  flex: 1;
+}
+
+/* כותרת המפגש */
+.title {
+  font-family: 'Assistant', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
+  color: #FFFFFF;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* תיאור המפגש */
+.description {
+  font-family: 'AssistantR', sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* קו תחתון עם צבע זהב בסוף כל תיאור */
+.description::after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(245, 184, 65, 0.7), transparent);
+  margin-top: 0.75rem;
+}
+
+/* התאמה למסכים קטנים */
+@media (max-width: 768px) {
+  .cardsContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .container {
+    padding: 1.5rem;
+  }
+  
+  .header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .mainTitle {
+    font-size: 1.75rem;
+  }
+}

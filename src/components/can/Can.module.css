@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin: 15px auto;
+  background-color: rgba(10, 14, 25, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.2rem 0.55rem;
+  direction: rtl;
+  width: 320px;
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  border: none;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), 0 0 20px rgba(76, 161, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+/* אפקט זוהר כחול-לבן - Blue-White Glow Effect */
+.container::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -30%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(
+    circle,
+    rgba(210, 235, 255, 0.15) 0%,
+    rgba(76, 161, 255, 0.1) 30%,
+    rgba(31, 87, 181, 0.05) 60%,
+    transparent 80%
+  );
+  pointer-events: none;
+  z-index: -1;
+  animation: pulseGlow 8s infinite alternate;
+}
+
+/* שכבה נוספת של זוהר - Additional Glow Layer */
+.container::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(142, 192, 255, 0.08) 40%,
+    rgba(27, 65, 153, 0.04) 60%,
+    transparent 80%
+  );
+  pointer-events: none;
+  z-index: -1;
+  animation: pulseGlow 8s infinite alternate-reverse;
+}
+
+@keyframes pulseGlow {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.5), 0 0 25px rgba(85, 175, 255, 0.25);
+}
+
+.text {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.15rem;
+  direction: rtl;
+  margin-right: 10px;
+  font-weight: 300;
+  width: 70%;
+  position: relative;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(85, 175, 255, 0.4);
+}
+
+.icon {
+  width: 20%;
+  color: #8ecaff;
+  position: relative;
+  filter: drop-shadow(0 0 8px rgba(85, 175, 255, 0.6));
+}
+
+@media (max-width: 350px) {
+  .container {
+    width: 270px;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .text {
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .icon {
+    width: 30%;
+    text-align: center;
+  }
+}

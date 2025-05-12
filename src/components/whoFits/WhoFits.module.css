@@ -1,0 +1,192 @@
+/* מכיל את כל הקומפוננטה */
+.container {
+    position: relative;
+   
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 1000px;
+    margin: 2% auto;
+    direction: rtl;
+    text-align: right;
+    border: 2px solid rgba(245, 184, 65, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+  
+  /* אפקט זוהר */
+  .glowEffect {
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+      circle,
+      rgba(245, 184, 65, 0.08) 0%,
+      rgba(245, 184, 65, 0.02) 30%,
+      transparent 70%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .sectionWrapper {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .section {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(245, 184, 65, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .section:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.3), 0 0 15px rgba(245, 184, 65, 0.3);
+    border: 1px solid rgba(245, 184, 65, 0.4);
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .title {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin: 0 0 0.75rem 0;
+    background: linear-gradient(90deg, #F5B841, #FFF3D6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+  }
+  
+  .line {
+    height: 3px;
+    width: 40%;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(90deg, #F5B841, transparent);
+    border-radius: 2px;
+  }
+  
+  .lineNegative {
+    height: 3px;
+    width: 40%;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(90deg, rgba(255, 80, 80, 0.7), transparent);
+    border-radius: 2px;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .listItem, .listItemNegative {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background: rgba(245, 184, 65, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .listItem:hover {
+    background: rgba(245, 184, 65, 0.1);
+    transform: translateX(-5px);
+  }
+  
+  .listItemNegative {
+    background: rgba(255, 80, 80, 0.05);
+  }
+  
+  .listItemNegative:hover {
+    background: rgba(255, 80, 80, 0.1);
+    transform: translateX(-5px);
+  }
+  
+  .iconWrapper, .iconWrapperNegative {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: rgba(245, 184, 65, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.75rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .iconWrapperNegative {
+    background: rgba(255, 80, 80, 0.1);
+  }
+  
+  .listItem:hover .iconWrapper {
+    transform: scale(1.1);
+    background: rgba(245, 184, 65, 0.2);
+  }
+  
+  .listItemNegative:hover .iconWrapperNegative {
+    transform: scale(1.1);
+    background: rgba(255, 80, 80, 0.2);
+  }
+  
+  .icon {
+    color: #F5B841;
+    font-size: 1.2rem;
+  }
+  
+  .iconNegative {
+    color: rgb(255, 80, 80);
+    font-size: 1.2rem;
+  }
+  
+  .itemText {
+    font-family: 'AssistantR', sans-serif;
+
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* התאמה למסכים קטנים */
+  @media (max-width: 768px) {
+    .sectionWrapper {
+      grid-template-columns: 1fr;
+    }
+    
+    .container {
+      padding: 1.5rem;
+    }
+    
+    .title {
+      font-size: 1.5rem;
+    }
+  }

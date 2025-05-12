@@ -1,0 +1,154 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'AssistantR', sans-serif;
+
+}
+
+/* חלק ראשון */
+.sectionOne {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center; /* מרכוז ורטיקלי */
+  gap: 3.5rem; /* הגדלת המרחק בין התמונה לטקסט */
+  margin-bottom: 4rem;
+}
+
+.contentBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  /* הסרת ההגבלה של הרוחב - חזרה למצב המקורי */
+}
+
+.mainTitle {
+  font-family: 'Assistant', sans-serif;
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-weight: bold;
+}
+
+.subTitle {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0 2rem 0;
+  color: #555;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.description {
+  width: 100%;
+}
+
+.descParagraph {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.imageContainer {
+  flex: 0 0 400px;
+  display: flex;
+  align-items: center;
+}
+
+.profileImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* צל עדין יותר */
+}
+
+/* תוכן ממורכז */
+.centeredContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.newSubtitle {
+  font-family: 'Assistant', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.newSubtitle:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #555;
+}
+
+.centeredImageContainer {
+  width: 400px;
+  max-width: 100%;
+  margin: 0 auto 2rem auto;
+}
+
+.centeredImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* צל עדין יותר */
+}
+
+.centeredTextContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.centeredParagraph {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  text-align: center; /* שומר על טקסט מיושר לימין */
+}
+
+.specialSubtitle {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  padding: 1rem;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  width: max-content;
+  margin: 2% auto;
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+  .sectionOne {
+    flex-direction: column;
+    gap: 2rem; /* מרווח קטן יותר במסכים קטנים */
+  }
+  
+  .imageContainer, .centeredImageContainer {
+    flex: 0 0 100%;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .specialSubtitle {
+    width: 100%;
+  }
+}

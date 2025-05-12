@@ -1,0 +1,148 @@
+/* Form.module.css */
+
+.formContainer {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  direction: rtl;
+  margin:0 auto;
+  position: relative;
+  z-index: 3;
+}
+
+.title {
+  font-family: 'Assistant', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #F5B841;
+  text-align: center;
+  line-height: 1.5;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 25px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.imageWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.blurImage {
+  max-width: 80%;
+  height: auto;
+  opacity: 0.3;
+  filter: blur(1px);
+}
+
+input,
+textarea {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 15px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transition: 0.3s ease;
+  direction: rtl;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #e0e0e0;
+  font-family: 'AssistantR', sans-serif;
+  font-weight: 400;
+}
+
+/* ספציפית לשדה טלפון – מיושר ימין */
+.phoneInput::placeholder {
+  text-align: right;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #F5B841;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 0 3px rgba(245, 184, 65, 0.2);
+}
+
+.submitButton {
+  background-color: #F5B841;
+  color: #1B2A41;
+  font-family: 'Assistant', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 0.2),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.25),
+    0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+.submitButton:hover {
+  background-color: #e5a81e;
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.3),
+    0 8px 18px rgba(0, 0, 0, 0.5);
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .formContainer {
+    padding: 30px 25px;
+  }
+  
+  .title {
+    font-size: 22px;
+  }
+  
+  .blurImage {
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .formContainer {
+    padding: 25px 20px;
+  }
+  
+  .title {
+    font-size: 20px;
+  }
+  
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  
+  .submitButton {
+    font-size: 15px;
+    padding: 12px;
+  }
+}

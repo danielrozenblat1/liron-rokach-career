@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+
 import './App.css';
+import ByMe from './components/ByMe/ByMe';
+import ContactForm from './components/form/Form';
+import AboutMe from './components/me/Me';
+import SyllabusComponent from './components/silabusss/Silabus';
+import HeroSection from './screens/FirstScreen';
+import ForthScreen from './screens/ForthScreen';
+import SecondScreen from './screens/SecondScreen';
+import SixthScreen from './screens/SixthScreen';
+import ThirdScreen from './screens/ThirdScreen';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <>
+  <HeroSection/>
+  <SecondScreen/>
+  <ThirdScreen/>
+  <AboutMe/>
+ <ForthScreen/>
+ <SixthScreen/>
+ <ByMe/>
+  </>
 }
 
 export default App;

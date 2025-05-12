@@ -1,0 +1,306 @@
+/* Base styles */
+.background{
+    background: #1B2A41;
+    padding:20px 0;
+    border-radius: 100px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    direction: rtl;
+    margin: 2% auto;
+  }
+  
+  .description {
+    font-family: 'AssistantR', sans-serif;
+    text-align: center;
+    direction: rtl;
+    font-size: 1.4rem;
+    color:white;
+    width: 75%;
+    margin: 2% auto;
+  }
+  
+  .icon {
+    display: flex;
+    width: 10%;
+    margin-left: auto;
+    position: relative;
+    z-index: -1;
+  }
+  
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    margin: 2% auto;
+    width: 25%;
+  }
+  
+  .image {
+    width: 100%;
+    justify-content: center;
+    object-fit: contain;
+  }
+  
+  .title {
+    font-family: "Assistant";
+    text-align: center;
+    direction: rtl;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2% auto;
+    color:white;
+    text-align: center;
+  }
+  
+  /* New styles for question row and marked title */
+  .questionRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    margin: 3% auto;
+    gap: 15px;
+  }
+  
+  .iconContainer {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .markedTitle {
+    font-family: "Assistant";
+    text-align: center;
+    direction: rtl;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: inline-block;
+    border-bottom: 3px solid transparent;
+    background-image: linear-gradient(to right, transparent, #1B2A41, transparent);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    padding-bottom: 5px;
+  }
+  
+  .arrowContainer {
+    display: flex;
+    justify-content: center;
+    margin: 5% auto 0;
+  }
+  
+  .bounceArrow {
+    animation: bounce 2s infinite ease-in-out;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Under 350px */
+  @media screen and (max-width: 349px) {
+    .description {
+      font-size: 1rem;
+      width: 90%;
+    }
+    .title, .markedTitle {
+      font-size: 1.5rem;
+    }
+    .name {
+      font-size: 2rem;
+    }
+    .row, .questionRow {
+      margin: 4% auto;
+    }
+    .markedTitle {
+      background-size: 100% 2px;
+      padding-bottom: 3px;
+    }
+    .iconContainer {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
+  /* 350px - 450px */
+  @media screen and (min-width: 350px) and (max-width: 450px) {
+    .description {
+      font-size: 1.1rem;
+      width: 85%;
+    }
+    .title, .markedTitle {
+      font-size: 1.7rem;
+    }
+    .name {
+      font-size: 2.2rem;
+    }
+    .markedTitle {
+      background-size: 100% 2px;
+      padding-bottom: 3px;
+    }
+    .iconContainer {
+      width: 45px;
+      height: 45px;
+    }
+  }
+  
+  /* 450px - 550px */
+  @media screen and (min-width: 451px) and (max-width: 550px) {
+    .description {
+      font-size: 1.2rem;
+      width: 80%;
+    }
+    .title, .markedTitle {
+      font-size: 2.2rem;
+    }
+    .name {
+      font-size: 2.4rem;
+    }
+    .markedTitle {
+      background-size: 100% 2.5px;
+      padding-bottom: 4px;
+    }
+    .iconContainer {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  /* 550px - 650px */
+  @media screen and (min-width: 551px) and (max-width: 650px) {
+    .description {
+      font-size: 1.25rem;
+      width: 80%;
+    }
+    .title, .markedTitle {
+      font-size: 2.3rem;
+    }
+    .name {
+      font-size: 2.5rem;
+    }
+    .markedTitle {
+      background-size: 100% 2.5px;
+      padding-bottom: 4px;
+    }
+    .iconContainer {
+      width: 55px;
+      height: 55px;
+    }
+  }
+  
+  /* 650px - 750px */
+  @media screen and (min-width: 651px) and (max-width: 750px) {
+    .description {
+      font-size: 1.3rem;
+      width: 78%;
+    }
+    .title, .markedTitle {
+      font-size: 2.4rem;
+    }
+    .name {
+      font-size: 2.6rem;
+    }
+    .markedTitle {
+      background-size: 100% 3px;
+      padding-bottom: 4px;
+    }
+    .iconContainer {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  /* 750px - 850px */
+  @media screen and (min-width: 751px) and (max-width: 850px) {
+    .description {
+      font-size: 1.35rem;
+      width: 76%;
+    }
+    .title, .markedTitle {
+      font-size: 2.45rem;
+    }
+    .name {
+      font-size: 2.65rem;
+    }
+    .markedTitle {
+      background-size: 100% 3px;
+      padding-bottom: 4px;
+    }
+    .iconContainer {
+      width: 65px;
+      height: 65px;
+    }
+  }
+  
+  /* 850px - 950px */
+  @media screen and (min-width: 851px) and (max-width: 950px) {
+    .description {
+      font-size: 1.37rem;
+      width: 75%;
+    }
+    .title, .markedTitle {
+      font-size: 2.47rem;
+    }
+    .name {
+      font-size: 2.67rem;
+    }
+    .iconContainer {
+      width: 68px;
+      height: 68px;
+    }
+  }
+  
+  /* 950px - 1050px */
+  @media screen and (min-width: 951px) and (max-width: 1050px) {
+    .description {
+      font-size: 1.38rem;
+      width: 75%;
+    }
+    .title, .markedTitle {
+      font-size: 2.48rem;
+    }
+    .name {
+      font-size: 2.68rem;
+    }
+  }
+  
+  /* 1050px - 1150px */
+  @media screen and (min-width: 1051px) and (max-width: 1150px) {
+    .description {
+      font-size: 1.39rem;
+      width: 75%;
+    }
+    .title, .markedTitle {
+      font-size: 2.49rem;
+    }
+    .name {
+      font-size: 2.69rem;
+    }
+  }
+  
+  /* 1150px - 1250px */
+  @media screen and (min-width: 1151px) and (max-width: 1250px) {
+    .description {
+      font-size: 1.4rem;
+      width: 75%;
+    }
+    .title, .markedTitle {
+      font-size: 2.5rem;
+    }
+    .name {
+      font-size: 2.7rem;
+    }
+  }
