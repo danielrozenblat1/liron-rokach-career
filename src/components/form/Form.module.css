@@ -11,7 +11,7 @@
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   direction: rtl;
-  margin:0 auto;
+  margin: 20px auto;
   position: relative;
   z-index: 3;
 }
@@ -111,38 +111,215 @@ textarea:focus {
     0 8px 18px rgba(0, 0, 0, 0.5);
 }
 
-/* Media queries */
-@media screen and (max-width: 768px) {
+/* מתחת ל-350px */
+@media (max-width: 349px) {
   .formContainer {
-    padding: 30px 25px;
+    padding: 10px 5px;
+    margin: 20px auto;
+    border-radius: 12px;
+    width: 85%;
+    max-width: none;
+  }
+  
+  .title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .form {
+    gap: 15px;
+  }
+  
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 10px 8px;
+    border-radius: 8px;
+  }
+  
+  .submitButton {
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 10px;
+  }
+  
+  .blurImage {
+    max-width: 70%;
+  }
+}
+
+/* 350px - 450px */
+@media (min-width: 350px) and (max-width: 449px) {
+  .formContainer {
+    padding: 15px 8px;
+    margin: 20px auto;
+    width: 85%;
+    max-width: none;
+  }
+  
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .form {
+    gap: 18px;
+  }
+  
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 11px 10px;
+  }
+  
+  .submitButton {
+    font-size: 15px;
+    padding: 13px;
+  }
+}
+
+/* 450px - 550px */
+@media (min-width: 450px) and (max-width: 549px) {
+  .formContainer {
+    padding: 20px 12px;
+    margin: 20px auto;
+    width: 85%;
+    max-width: none;
+  }
+  
+  .title {
+    font-size: 21px;
+  }
+  
+  .form {
+    gap: 19px;
+  }
+  
+  input,
+  textarea {
+    font-size: 14px;
+    padding: 11px 12px;
+  }
+}
+
+/* 550px - 650px */
+@media (min-width: 550px) and (max-width: 649px) {
+  .formContainer {
+    padding: 25px 15px;
+    margin: 20px auto;
+    width: 85%;
+    max-width: none;
   }
   
   .title {
     font-size: 22px;
   }
   
-  .blurImage {
-    max-width: 50%;
+  .form {
+    gap: 19px;
   }
 }
 
-@media screen and (max-width: 480px) {
+/* 650px - 750px */
+@media (min-width: 650px) and (max-width: 749px) {
   .formContainer {
-    padding: 25px 20px;
+    padding: 30px 20px;
+    margin: 20px auto;
+    width: 85%;
+    max-width: none;
   }
   
   .title {
-    font-size: 20px;
+    font-size: 23px;
+    margin-bottom: 23px;
   }
   
-  input,
-  textarea {
-    font-size: 14px;
-    padding: 10px 12px;
+  .form {
+    gap: 19px;
+  }
+}
+
+/* 750px - 850px */
+@media (min-width: 750px) and (max-width: 849px) {
+  .formContainer {
+    padding: 35px 25px;
+    margin: 20px auto;
+    width: 85%;
+    max-width: none;
   }
   
-  .submitButton {
-    font-size: 15px;
-    padding: 12px;
+  .title {
+    font-size: 23px;
+    margin-bottom: 24px;
+  }
+  
+  .form {
+    gap: 20px;
+  }
+}
+
+/* 850px - 950px */
+@media (min-width: 850px) and (max-width: 949px) {
+  .formContainer {
+    padding: 38px 28px;
+    margin: 20px auto;
+    width: 85%;
+    max-width: none;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+/* 950px - 1050px */
+@media (min-width: 950px) and (max-width: 1049px) {
+  .formContainer {
+    padding: 40px 30px;
+    margin: 20px auto;
+    width: 85%;
+    max-width: none;
+  }
+  
+  .title {
+    margin-bottom: 25px;
+  }
+}
+
+/* 1050px - 1150px */
+@media (min-width: 1050px) and (max-width: 1149px) {
+  .formContainer {
+    padding: 40px 30px;
+    margin: 20px auto;
+    width: 85%;
+    max-width: none;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .form {
+    gap: 20px;
+  }
+}
+
+/* 1150px - 1250px */
+@media (min-width: 1150px) and (max-width: 1250px) {
+  .formContainer {
+    padding: 40px 30px;
+    margin: 20px auto;
+    width: 85%;
+    max-width: none;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+  
+  .form {
+    gap: 20px;
   }
 }

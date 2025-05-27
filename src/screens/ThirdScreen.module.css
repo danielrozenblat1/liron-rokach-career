@@ -52,7 +52,9 @@
     font-size: 2.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     margin: 2% auto;
-    color:white;
+  background: linear-gradient(to left, #ffffff 10%, #F5B841 60%, #F5B841);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
     text-align: center;
   }
   
@@ -110,17 +112,21 @@
     }
   }
   
-  /* Under 350px */
+  /* מתחת ל-350px */
   @media screen and (max-width: 349px) {
+    .background {
+      border-radius: 20px;
+    }
     .description {
-      font-size: 1rem;
-      width: 90%;
+      font-size: 1.1rem;
+      width: 95%;
     }
     .title, .markedTitle {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
+      width: 90%;
     }
     .name {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
     .row, .questionRow {
       margin: 4% auto;
@@ -130,44 +136,87 @@
       padding-bottom: 3px;
     }
     .iconContainer {
-      width: 40px;
-      height: 40px;
+      width: 35px;
+      height: 35px;
+    }
+    .imageContainer {
+      width: 60%;
     }
   }
   
   /* 350px - 450px */
   @media screen and (min-width: 350px) and (max-width: 450px) {
+    .background {
+      border-radius: 30px;
+    }
     .description {
-      font-size: 1.1rem;
-      width: 85%;
+      font-size: 1.2rem;
+      width: 90%;
     }
     .title, .markedTitle {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
+      width: 85%;
     }
     .name {
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
     .markedTitle {
       background-size: 100% 2px;
       padding-bottom: 3px;
     }
     .iconContainer {
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
+    }
+    .imageContainer {
+      width: 50%;
     }
   }
   
   /* 450px - 550px */
   @media screen and (min-width: 451px) and (max-width: 550px) {
+    .background {
+      border-radius: 40px;
+    }
+    .description {
+      font-size: 1.1rem;
+      width: 85%;
+    }
+    .title, .markedTitle {
+      font-size: 1.8rem;
+      width: 80%;
+    }
+    .name {
+      font-size: 2.2rem;
+    }
+    .markedTitle {
+      background-size: 100% 2.5px;
+      padding-bottom: 4px;
+    }
+    .iconContainer {
+      width: 45px;
+      height: 45px;
+    }
+    .imageContainer {
+      width: 45%;
+    }
+  }
+  
+  /* 550px - 650px */
+  @media screen and (min-width: 551px) and (max-width: 650px) {
+    .background {
+      border-radius: 50px;
+    }
     .description {
       font-size: 1.2rem;
       width: 80%;
     }
     .title, .markedTitle {
-      font-size: 2.2rem;
+      font-size: 2rem;
+      width: 78%;
     }
     .name {
-      font-size: 2.4rem;
+      font-size: 2.3rem;
     }
     .markedTitle {
       background-size: 100% 2.5px;
@@ -177,41 +226,55 @@
       width: 50px;
       height: 50px;
     }
+    .imageContainer {
+      width: 40%;
+    }
   }
   
-  /* 550px - 650px */
-  @media screen and (min-width: 551px) and (max-width: 650px) {
+  /* 650px - 750px */
+  @media screen and (min-width: 651px) and (max-width: 750px) {
+    .background {
+      border-radius: 60px;
+    }
     .description {
       font-size: 1.25rem;
-      width: 80%;
+      width: 78%;
     }
     .title, .markedTitle {
-      font-size: 2.3rem;
+      font-size: 2.2rem;
+      width: 76%;
     }
     .name {
-      font-size: 2.5rem;
+      font-size: 2.4rem;
     }
     .markedTitle {
-      background-size: 100% 2.5px;
+      background-size: 100% 3px;
       padding-bottom: 4px;
     }
     .iconContainer {
       width: 55px;
       height: 55px;
     }
+    .imageContainer {
+      width: 35%;
+    }
   }
   
-  /* 650px - 750px */
-  @media screen and (min-width: 651px) and (max-width: 750px) {
+  /* 750px - 850px */
+  @media screen and (min-width: 751px) and (max-width: 850px) {
+    .background {
+      border-radius: 70px;
+    }
     .description {
       font-size: 1.3rem;
-      width: 78%;
+      width: 76%;
     }
     .title, .markedTitle {
-      font-size: 2.4rem;
+      font-size: 2.3rem;
+      width: 75%;
     }
     .name {
-      font-size: 2.6rem;
+      font-size: 2.5rem;
     }
     .markedTitle {
       background-size: 100% 3px;
@@ -221,86 +284,107 @@
       width: 60px;
       height: 60px;
     }
-  }
-  
-  /* 750px - 850px */
-  @media screen and (min-width: 751px) and (max-width: 850px) {
-    .description {
-      font-size: 1.35rem;
-      width: 76%;
-    }
-    .title, .markedTitle {
-      font-size: 2.45rem;
-    }
-    .name {
-      font-size: 2.65rem;
-    }
-    .markedTitle {
-      background-size: 100% 3px;
-      padding-bottom: 4px;
-    }
-    .iconContainer {
-      width: 65px;
-      height: 65px;
+    .imageContainer {
+      width: 32%;
     }
   }
   
   /* 850px - 950px */
   @media screen and (min-width: 851px) and (max-width: 950px) {
+    .background {
+      border-radius: 80px;
+    }
     .description {
-      font-size: 1.37rem;
+      font-size: 1.35rem;
       width: 75%;
     }
     .title, .markedTitle {
-      font-size: 2.47rem;
+      font-size: 2.4rem;
+      width: 75%;
     }
     .name {
-      font-size: 2.67rem;
+      font-size: 2.6rem;
     }
     .iconContainer {
-      width: 68px;
-      height: 68px;
+      width: 65px;
+      height: 65px;
+    }
+    .imageContainer {
+      width: 30%;
     }
   }
   
   /* 950px - 1050px */
   @media screen and (min-width: 951px) and (max-width: 1050px) {
+    .background {
+      border-radius: 85px;
+    }
     .description {
-      font-size: 1.38rem;
+      font-size: 1.37rem;
       width: 75%;
     }
     .title, .markedTitle {
-      font-size: 2.48rem;
+      font-size: 2.45rem;
+      width: 75%;
     }
     .name {
-      font-size: 2.68rem;
+      font-size: 2.65rem;
+    }
+    .iconContainer {
+      width: 68px;
+      height: 68px;
+    }
+    .imageContainer {
+      width: 28%;
     }
   }
   
   /* 1050px - 1150px */
   @media screen and (min-width: 1051px) and (max-width: 1150px) {
+    .background {
+      border-radius: 90px;
+    }
     .description {
-      font-size: 1.39rem;
+      font-size: 1.38rem;
       width: 75%;
     }
     .title, .markedTitle {
-      font-size: 2.49rem;
+      font-size: 2.47rem;
+      width: 75%;
     }
     .name {
-      font-size: 2.69rem;
+      font-size: 2.67rem;
+    }
+    .iconContainer {
+      width: 70px;
+      height: 70px;
+    }
+    .imageContainer {
+      width: 26%;
     }
   }
   
   /* 1150px - 1250px */
   @media screen and (min-width: 1151px) and (max-width: 1250px) {
+    .background {
+      border-radius: 95px;
+    }
     .description {
       font-size: 1.4rem;
       width: 75%;
     }
     .title, .markedTitle {
       font-size: 2.5rem;
+      width: 75%;
     }
     .name {
       font-size: 2.7rem;
+    }
+    .iconContainer {
+      width: 70px;
+      height: 70px;
+    }
+    .imageContainer {
+      width: 25%;
     }
   }

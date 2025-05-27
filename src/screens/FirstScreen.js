@@ -44,7 +44,7 @@ const HeroSection = () => {
                     <path d="M12 6V12L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <span className={styles.featureLabel}>פגישות פרונטליות עם לירון</span>
+                <span className={styles.featureLabel}>פגישות אישיות עם לירון</span>
               </div>
               
               <div className={styles.featureItem}>
