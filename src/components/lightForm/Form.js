@@ -5,7 +5,7 @@ import liron from "../../images/לירון רוקח חתימה.png"
 
 const ContactForm = () => {
   return (
-    <div className={styles.formContainer}>
+    <div className={styles.formContainer} id="טופס">
       <h2 className={styles.title}>השאר פרטים לשיחת ייעוץ ללא עלות</h2>
       <form className={styles.form}>
         <input
