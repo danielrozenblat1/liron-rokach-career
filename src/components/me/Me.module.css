@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   font-family: 'AssistantR', sans-serif;
-  direction:rtl
+
 }
 
 /* חלק ראשון */
@@ -43,6 +43,7 @@
 
 .description {
   width: 100%;
+    direction:rtl
 }
 
 .descParagraph {
@@ -116,6 +117,7 @@
 .centeredParagraph {
   margin-bottom: 2rem;
   font-size: 1.1rem;
+    direction:rtl;
   line-height: 1.6;
   color: #444;
   text-align: center;

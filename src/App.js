@@ -3,6 +3,7 @@ import './App.css';
 import ByMe from './components/ByMe/ByMe';
 import ContactForm from './components/form/Form';
 import AboutMe from './components/me/Me';
+import PrivacyPolicy from './components/privacy/Privacy';
 import SyllabusComponent from './components/silabusss/Silabus';
 import NavBarNew from './CourseNav/NavBarNew';
 import HeroSection from './screens/FirstScreen';
@@ -20,6 +21,12 @@ function App() {
   <AboutMe/>
  <ForthScreen/>
  <SixthScreen/>
+       <PrivacyPolicy
+                ownerName="לירון רוקח"
+                email="Liron8915@gmail.com"
+                phone="+972 50-670-4555"
+                domain="https://lironrokach-career.co.il/"
+              />
  <ByMe/>
   </>
 }
