@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './FirstScreen.module.css';
-import liron from "../images/לירון רוקח.png";
 import ContactForm from '../components/form/Form';
 
 const HeroSection = () => {
@@ -17,11 +16,11 @@ const HeroSection = () => {
           <div className={styles.textContent}>
             {/* פסקת תיאור */}
             <p className={styles.descriptionB}>
-              במיוחד לחיילים משוחררים שרוצים לשים סוף לחוסר וודאות ולמצוא כיוון לחיים
+              במיוחד לחיילים משוחררים
             </p>
             
             {/* כותרת ראשית */}
-            <h1 className={styles.title}>ייעוץ תעסוקתי ממוקד שיעזור לך למצוא את הכיוון שלך בחיים</h1>
+            <h1 className={styles.title}>איך למצוא כיוון קריירה ברור ומדויק מבלי לבזבז חודשים בתחושת בלבול ואיבוד זמן יקר אחרי השחרור</h1>
             <p className={styles.highlightedDescription}>
               כי הגיע הזמן לסיפתח חדש ומדוייק לחיים שלך
             </p>
@@ -58,22 +57,6 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-        </div>
-        
-        {/* אזור התמונה */}
-        <div className={styles.imageSection}>
-          <div className={styles.specialEffectBg}>
-            <div className={styles.effectCircle}></div>
-            <div className={styles.effectRing}></div>
-            <div className={styles.effectBlur}></div>
-            <div className={styles.effectShimmer}></div>
-            <div className={styles.effectGlass}></div>
-          </div>
-          <img 
-            src={liron} 
-            alt="ייעוץ תעסוקתי לחיילים משוחררים" 
-            className={styles.heroImage} 
-          />
         </div>
       </div>
       
