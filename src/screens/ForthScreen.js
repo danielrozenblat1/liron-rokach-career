@@ -6,6 +6,7 @@ import FifthScreen from "./FifthScreen"
 import styles from "./ForthScreen.module.css"
 import { Player } from "@lordicon/react"
 import down from "../icons/wired-outline-2755-arrow-big-down-hover-slide.json"
+import Recommendations from "../components/recommends/Recommends"
 const ForthScreen=()=>{
   const handleComplete = () => {
     setTimeout(() => {
@@ -48,6 +49,7 @@ return <>
       </div>
     </div>
 <SyllabusComponent/>
+<Recommendations/>
 <div className={styles.title}>וכדי להיות באמת בטוח שהתהליך בשבילך:</div>
 <EligibilitySection/>
 <ContactForm/>

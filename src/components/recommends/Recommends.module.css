@@ -12,14 +12,15 @@
   direction: rtl;
   width: 100%;
   font-weight: 800;
-  color: black;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  color: rgb(255, 255, 255);
+
 }
 
 .explain {
   font-size: 25px;
   direction: rtl;
   width: 65%;
+    color: rgb(255, 255, 255);
   text-align: center;
   margin: 2% auto;
   font-family: "AssistantR";

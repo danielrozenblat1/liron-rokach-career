@@ -6,13 +6,14 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 // Import your images
-import result1 from "../../images/סוזנה פנחסי לקוחה ממליצה 1.png";
-import result2 from "../../images/סוזנה פנחסי לקוחה ממליצה 2.png";
-import result3 from "../../images/סוזנה פנחסי לקוחה ממליצה 3.png";
-
+import result1 from "../../images/לירון רוקח המלצות 1.png";
+import result2 from "../../images/לירון רוקח המלצות 2.png";
+import result3 from "../../images/לירון רוקח המלצות 3.png";
+import result4 from "../../images/לירון רוקח המלצות 4.png";
+import result5 from "../../images/לירון רוקח המלצות 5.png";
 const Recommendations = () => {
   const images = [
-    result1, result2, result3
+    result1, result2, result3, result4, result5
   ];
 
   const sliderSettings = {
@@ -34,9 +35,9 @@ const Recommendations = () => {
 
   return (
     <>
-      <div className={styles.title}>תשמעי מאלו שעשו את הצעד!</div>
+      <div className={styles.title}>קצת ממה שיש לאלה שעשו את הצעד לומר:</div>
       <div className={styles.explain}>
-        תחליקי בין התמונות
+      החליקו בין התמונות
       </div>
       <div className={styles.sliderContainer}>
         <Slider {...sliderSettings}>
@@ -55,7 +56,7 @@ const Recommendations = () => {
           ))}
         </Slider>
       </div>
-      <Button text="סוזנה, בואי נדבר!" />
+    
     </>
   );
 };

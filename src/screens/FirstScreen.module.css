@@ -68,7 +68,7 @@
 .textContent {
   width: 100%;
   max-width: 900px;
-  padding: 40px 50px 40px 50px;
+  padding: 0 50px 40px 0;
   position: relative;
   z-index: 1;
   text-align: center; /* מרכז טקסט */
@@ -121,7 +121,7 @@
   font-family: 'AssistantR', sans-serif;
   font-size: 1.5rem;
   line-height: 1.6;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0;
   color: rgba(255, 255, 255, 0.95);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -133,92 +133,14 @@
   text-align: center;
 }
 
-/* אייקונים ותכונות */
-.featuresContainer {
-  display: flex;
-  margin-top: 2rem;
-  justify-content: space-between; /* חזרה למצב הקודם */
-  width: 90%;
-  gap: 20px;
-}
-
-.featureItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  position: relative;
-  padding: 20px 15px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 16px;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(245, 184, 65, 0.05);
-  max-width: 25%;
-}
-
-.featureItem:hover {
-  background: rgba(245, 184, 65, 0.05);
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(245, 184, 65, 0.1);
-}
-
-.featureIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  background: rgba(245, 184, 65, 0.1);
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  color: #F5B841;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(245, 184, 65, 0.15);
-}
-
-.featureItem:hover .featureIcon {
-  background: rgba(245, 184, 65, 0.2);
-  transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 0 20px rgba(245, 184, 65, 0.25);
-}
-
-.icon {
-  width: 25px;
-  height: 25px;
-}
-
-.featureLabel {
-  font-family: 'AssistantR', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.featureItem:hover .featureLabel {
-  color: #F5B841;
-}
-
 /* אזור הטופס */
 .formSection {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 0 20px 40px 20px;
   background-color: #1B2A41;
-  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
   position: relative;
-}
-
-.formSection::before {
-  content: '';
-  position: absolute;
-  top: -50px;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  background: linear-gradient(to bottom, transparent, rgba(27, 42, 65, 0.9));
 }
 
 /* Media Queries - CSS השני לגדלים קטנים */
@@ -233,7 +155,6 @@
     box-sizing: border-box;
     overflow: visible;
     margin-top: 0;
-    
   }
   
   .contentSection {
@@ -269,69 +190,11 @@
     font-size: 1.2rem;
   }
   
-  .featuresContainer {
-    width: 90%;
-    gap: 15px;
-    justify-content: space-between;
-  }
-  
-  .featureItem {
-    max-width: 30%;
-  }
-  
-  .featureLabel {
-    font-size: 0.9rem;
-  }
-  
   .formSection {
     padding: 0 20px 30px 20px;
     max-width: 1400px;
     margin: 0 auto;
     box-sizing: border-box;
-    margin-top: 0;
-  }
-  
-  .formSection::before {
-    top: -80px;
-    left: -20%;
-    width: 140%;
-    height: 80px;
-  }
-}
-
-/* 1150px - 1250px */
-@media screen and (max-width: 1150px) {
-  .featuresContainer {
-    gap: 12px;
-  }
-}
-
-/* 1050px - 1150px */
-@media screen and (max-width: 1050px) {
-  .textContent {
-    padding: 30px 40px 30px 30px;
-  }
-  
-  .featureIcon {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .icon {
-    width: 22px;
-    height: 22px;
-  }
-}
-
-/* 950px - 1050px */
-@media screen and (max-width: 950px) {
-  .featuresContainer {
-    gap: 10px;
-  }
-  
-  .featureItem {
-    padding: 15px 10px;
-    max-width: 30%;
   }
 }
 
@@ -341,7 +204,6 @@
     align-items: center;
     justify-content: center;
     padding-top: 1rem;
-    
   }
   
   .contentSection {
@@ -365,18 +227,6 @@
     font-size: 1.8rem;
   }
   
-  .featuresContainer {
-    justify-content: space-between;
-    gap: 15px;
-    margin-top: 1.5rem;
-    width: 100%;
-  }
-  
-  .featureItem {
-    width: 30%;
-    padding: 15px 12px;
-  }
-  
   .formSection {
     padding: 0 20px 25px 20px;
   }
@@ -390,27 +240,6 @@
   
   .textContent {
     padding: 25px 15px;
-  }
-  
-  .featuresContainer {
-    gap: 12px;
-    margin-top: 1.5rem;
-  }
-  
-  .featureItem {
-    width: 30%;
-    padding: 12px 8px;
-  }
-  
-  .featureIcon {
-    width: 45px;
-    height: 45px;
-    margin-bottom: 0.7rem;
-  }
-  
-  .icon {
-    width: 20px;
-    height: 20px;
   }
   
   .formSection {
@@ -432,26 +261,6 @@
     font-size: 1.6rem;
   }
   
-  .featuresContainer {
-    gap: 10px;
-  }
-  
-  .featureItem {
-    width: 30%;
-    padding: 10px 6px;
-  }
-  
-  .featureIcon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 0.5rem;
-  }
-  
-  .icon {
-    width: 18px;
-    height: 18px;
-  }
-  
   .formSection {
     padding: 0 20px 30px 20px;
   }
@@ -468,35 +277,6 @@
     padding: 20px 10px;
   }
   
-  .featuresContainer {
-    gap: 8px;
-    margin-top: 1.2rem;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .featureItem {
-    width: 30%;
-    min-width: 80px;
-    padding: 8px 4px;
-  }
-  
-  .featureIcon {
-    width: 35px;
-    height: 35px;
-    margin-bottom: 0.4rem;
-  }
-  
-  .icon {
-    width: 16px;
-    height: 16px;
-  }
-  
-  .featureLabel {
-    font-size: 0.8rem;
-    text-align: center;
-  }
-  
   .formSection {
     padding: 0 15px 25px 15px;
   }
@@ -510,34 +290,6 @@
   
   .title {
     font-size: 1.4rem;
-  }
-  
-  .featuresContainer {
-    gap: 6px;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .featureItem {
-    width: 30%;
-    min-width: 75px;
-    padding: 6px 3px;
-  }
-  
-  .featureIcon {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 0.3rem;
-  }
-  
-  .icon {
-    width: 14px;
-    height: 14px;
-  }
-  
-  .featureLabel {
-    font-size: 0.75rem;
-    text-align: center;
   }
   
   .textContent {
@@ -557,35 +309,6 @@
   
   .textContent {
     padding: 10px 5px;
-  }
-  
-  .featuresContainer {
-    gap: 5px;
-    margin-top: 1rem;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .featureItem {
-    width: 30%;
-    min-width: 70px;
-    padding: 5px 2px;
-  }
-  
-  .featureIcon {
-    width: 28px;
-    height: 28px;
-    margin-bottom: 0.2rem;
-  }
-  
-  .icon {
-    width: 12px;
-    height: 12px;
-  }
-  
-  .featureLabel {
-    font-size: 0.7rem;
-    text-align: center;
   }
   
   .formSection {

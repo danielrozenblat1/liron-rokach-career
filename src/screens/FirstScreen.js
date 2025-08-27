@@ -25,7 +25,7 @@ const HeroSection = () => {
               כי הגיע הזמן לסיפתח חדש ומדוייק לחיים שלך
             </p>
             {/* אייקונים ומידע */}
-            <div className={styles.featuresContainer}>
+            {/* <div className={styles.featuresContainer}>
               <div className={styles.featureItem}>
                 <div className={styles.featureIcon}>
                   <svg viewBox="0 0 24 24" className={styles.icon} fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,15 +55,17 @@ const HeroSection = () => {
                 </div>
                 <span className={styles.featureLabel}>תוצאות מוכחות תוך זמן קצר</span>
               </div>
-            </div>
+            </div> */}
           </div>
+             <div className={styles.formSection}>
+        <ContactForm />
+      </div>
         </div>
+        
       </div>
       
       {/* טופס יצירת קשר */}
-      <div className={styles.formSection}>
-        <ContactForm />
-      </div>
+   
     </div>
   </>
 };
