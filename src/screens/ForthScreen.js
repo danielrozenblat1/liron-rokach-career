@@ -7,6 +7,7 @@ import styles from "./ForthScreen.module.css"
 import { Player } from "@lordicon/react"
 import down from "../icons/wired-outline-2755-arrow-big-down-hover-slide.json"
 import Recommendations from "../components/recommends/Recommends"
+import Shorts from "../components/shorts/Shorts"
 const ForthScreen=()=>{
   const handleComplete = () => {
     setTimeout(() => {
@@ -50,6 +51,7 @@ return <>
     </div>
 <SyllabusComponent/>
 <Recommendations/>
+<Shorts/>
 <div className={styles.title}>וכדי להיות באמת בטוח שהתהליך בשבילך:</div>
 <EligibilitySection/>
 <ContactForm/>
