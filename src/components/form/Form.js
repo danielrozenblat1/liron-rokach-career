@@ -99,14 +99,15 @@ const ContactForm = () => {
         <div style={{ 
           display: "flex", 
           justifyContent: "center", 
-          marginTop: "15px",
-          marginBottom: "15px"
+       
         }}>
           <label style={{ 
             direction: "rtl", 
             fontFamily: "AssistantR", 
             fontSize: "0.9rem", 
             textAlign: "right", 
+            marginTop:"-10px",
+                 marginBottom:"-10px",
             display: "flex", 
             color:'white',
             alignItems: "center", 
