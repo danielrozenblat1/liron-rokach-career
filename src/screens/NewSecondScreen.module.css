@@ -1,0 +1,1115 @@
+/* Base styles */
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  direction: rtl;
+  margin: 2% auto;
+}
+
+.description {
+  font-family: 'AssistantR', sans-serif;
+  text-align: center;
+  direction: rtl;
+  font-size: 1.4rem;
+  width: 75%;
+  margin: 2% auto;
+}
+
+.icon {
+  display: flex;
+  width: 10%;
+  margin-left: auto;
+  position: relative;
+  z-index: -1;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  margin: 2% auto;
+  width: 25%;
+}
+
+.image {
+  width: 100%;
+  justify-content: center;
+  object-fit: contain;
+
+}
+
+.title {
+  font-family: "Assistant";
+  text-align: center;
+  direction: rtl;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 2% auto;
+}
+
+/* Question row and marked title */
+.questionRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  direction: rtl;
+  margin: 3% auto;
+  gap: 15px;
+  width: 95%;
+  max-width: 95%;
+  box-sizing: border-box;
+}
+
+.iconContainer {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.markedTitle {
+  font-family: "Assistant";
+  text-align: center;
+  direction: rtl;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: inline-block;
+  border-bottom: 3px solid transparent;
+  background-image: linear-gradient(to right, transparent, #1B2A41, transparent);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 3px;
+  padding-bottom: 5px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    margin:0 auto;
+}
+.arrowContainer {
+  display: flex;
+  justify-content: center;
+  margin: 5% auto 0;
+}
+
+.bounceArrow {
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Highlight text - no yellow underline */
+.highlightText {
+  font-family: "Assistant";
+  text-align: center;
+  direction: rtl;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1B2A41;
+  margin: 3% auto;
+  width: 80%;
+  max-width: 95%;
+  box-sizing: border-box;
+}
+
+/* Guarantee box */
+.guaranteeBox {
+  background: linear-gradient(145deg, #f8f9fa, #ffffff);
+  border-radius: 20px;
+  padding: 30px 20px;
+  margin: 4% auto;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(27, 42, 65, 0.1);
+  direction: rtl;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.guaranteeText {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.guaranteeHighlight {
+  font-family: "Assistant";
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1B8A41;
+  margin: 15px 0;
+}
+
+.guaranteeSmall {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.1rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* NEW: Glassmorphism Warning section */
+.warningSection {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 245, 245, 0.85) 50%,
+    rgba(255, 240, 240, 0.8) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 40px 30px;
+  margin: 4% auto;
+  width: 90%;
+  max-width: 750px;
+  box-shadow: 
+    0 8px 32px rgba(180, 100, 100, 0.12),
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 0 rgba(200, 150, 150, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  direction: rtl;
+  text-align: right;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.warningSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(220, 120, 120, 0.6) 0%,
+    rgba(200, 100, 100, 0.8) 50%,
+    rgba(180, 80, 80, 0.6) 100%
+  );
+  border-radius: 0 24px 24px 0;
+}
+
+.warningSection::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(255, 200, 200, 0.15) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+.warningTitle {
+  font-family: "Assistant";
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #b85555, #8b4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.warningSubtitle {
+  font-family: "Assistant";
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #4a4a4a;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.warningText {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.9;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.warningEmphasis {
+  font-family: "Assistant";
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #444;
+  margin: 22px 0;
+  padding: 18px 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 245, 245, 0.5) 100%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 14px;
+  border: 1px solid rgba(200, 150, 150, 0.2);
+  box-shadow: 0 4px 15px rgba(180, 100, 100, 0.08);
+  position: relative;
+  z-index: 1;
+}
+
+.warningCTA {
+  font-family: "Assistant";
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1B2A41;
+  margin-top: 22px;
+  position: relative;
+  z-index: 1;
+}
+
+/* NEW: Benefits section with glassmorphism icons */
+.benefitsSection {
+  margin: 5% auto;
+  width: 90%;
+  max-width: 900px;
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+.benefitsTitle {
+  font-family: "Assistant";
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1B2A41;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.benefitCard {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(27, 42, 65, 0.08);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.benefitCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* NEW: Glassmorphism dark blue icon wrapper */
+.benefitIcon {
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    rgba(27, 42, 65, 0.85) 0%,
+    rgba(40, 60, 90, 0.75) 50%,
+    rgba(27, 42, 65, 0.85) 100%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 14px;
+  box-shadow: 
+    0 4px 20px rgba(27, 42, 65, 0.25),
+    0 2px 8px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.benefitIcon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    transparent 100%
+  );
+  border-radius: 14px 14px 0 0;
+  pointer-events: none;
+}
+
+.benefitText {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.15rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+
+/* מתחת ל-350px */
+@media screen and (max-width: 349px) {
+  .description {
+    font-size: 1rem;
+    width: 95%;
+    margin: 3% auto;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    margin: 3% auto;
+    width: 95%;
+  }
+  
+  .markedTitle {
+    font-size: 1.3rem;
+    background-size: 100% 2px;
+    padding-bottom: 3px;
+  }
+  
+  .imageContainer {
+    width: 85%;
+    margin: 4% auto;
+  }
+  
+  .questionRow {
+    margin: 4% auto;
+    gap: 8px;
+    flex-wrap: wrap;
+    width: 95%;
+  }
+  
+  .iconContainer {
+    width: 35px;
+    height: 35px;
+  }
+
+  .highlightText {
+    font-size: 1.3rem;
+    width: 95%;
+  }
+
+  .guaranteeBox {
+    padding: 20px 15px;
+    width: 95%;
+  }
+
+  .guaranteeText {
+    font-size: 1rem;
+  }
+
+  .guaranteeHighlight {
+    font-size: 1.4rem;
+  }
+
+  .guaranteeSmall {
+    font-size: 0.95rem;
+  }
+
+  .warningSection {
+    padding: 25px 18px;
+    width: 95%;
+    border-radius: 18px;
+  }
+
+  .warningTitle {
+    font-size: 1.5rem;
+  }
+
+  .warningSubtitle {
+    font-size: 1.2rem;
+  }
+
+  .warningText {
+    font-size: 1rem;
+  }
+
+  .warningEmphasis {
+    font-size: 1.1rem;
+    padding: 14px 16px;
+  }
+
+  .warningCTA {
+    font-size: 1.2rem;
+  }
+
+  .benefitsSection {
+    width: 95%;
+  }
+
+  .benefitsTitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0;
+  }
+
+  .benefitCard {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .benefitIcon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 1.2rem;
+  }
+
+  .benefitText {
+    font-size: 1rem;
+  }
+}
+
+/* 350px - 450px */
+@media screen and (min-width: 350px) and (max-width: 450px) {
+  .description {
+    font-size: 1.1rem;
+    width: 90%;
+    margin: 3% auto;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    margin: 3% auto;
+    width: 95%;
+  }
+  
+  .markedTitle {
+    font-size: 1.5rem;
+    padding-bottom: 3px;
+       width: 95%;
+  }
+  
+  .imageContainer {
+    width: 75%;
+    margin: 4% auto;
+  }
+  
+  .questionRow {
+    margin: 4% auto;
+    gap: 10px;
+    width: 95%;
+  }
+  
+  .iconContainer {
+    width: 40px;
+    height: 40px;
+  }
+
+  .highlightText {
+    font-size: 1.4rem;
+    width: 92%;
+  }
+
+  .guaranteeBox {
+    padding: 22px 15px;
+    width: 92%;
+  }
+
+  .guaranteeText {
+    font-size: 1.1rem;
+  }
+
+  .guaranteeHighlight {
+    font-size: 1.5rem;
+  }
+
+  .guaranteeSmall {
+    font-size: 1rem;
+  }
+
+  .warningSection {
+    padding: 28px 20px;
+    width: 92%;
+  }
+
+  .warningTitle {
+    font-size: 1.6rem;
+  }
+
+  .warningSubtitle {
+    font-size: 1.25rem;
+  }
+
+  .warningText {
+    font-size: 1.05rem;
+  }
+
+  .warningEmphasis {
+    font-size: 1.15rem;
+  }
+
+  .warningCTA {
+    font-size: 1.25rem;
+  }
+
+  .benefitsSection {
+    width: 92%;
+  }
+
+  .benefitsTitle {
+    font-size: 1.6rem;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 0;
+  }
+
+  .benefitCard {
+    padding: 16px;
+  }
+
+  .benefitIcon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    font-size: 1.3rem;
+  }
+
+  .benefitText {
+    font-size: 1.05rem;
+  }
+}
+
+/* 450px - 550px */
+@media screen and (min-width: 451px) and (max-width: 550px) {
+  .description {
+    font-size: 1.2rem;
+    width: 85%;
+    margin: 3% auto;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin: 3% auto;
+    width: 95%;
+  }
+  
+  .markedTitle {
+    font-size: 1.7rem;
+    background-size: 100% 2.5px;
+    padding-bottom: 4px;
+  }
+  
+  .imageContainer {
+    width: 65%;
+    margin: 3% auto;
+  }
+  
+  .questionRow {
+    margin: 3% auto;
+    gap: 12px;
+    width: 95%;
+  }
+  
+  .iconContainer {
+    width: 45px;
+    height: 45px;
+  }
+
+  .highlightText {
+    font-size: 1.5rem;
+    width: 88%;
+  }
+
+  .guaranteeBox {
+    padding: 25px 18px;
+    width: 90%;
+  }
+
+  .guaranteeText {
+    font-size: 1.15rem;
+  }
+
+  .guaranteeHighlight {
+    font-size: 1.6rem;
+  }
+
+  .warningSection {
+    padding: 32px 24px;
+    width: 90%;
+  }
+
+  .warningTitle {
+    font-size: 1.7rem;
+  }
+
+  .benefitsSection {
+    width: 90%;
+  }
+
+  .benefitsTitle {
+    font-size: 1.8rem;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0;
+  }
+
+  .benefitCard {
+    padding: 18px;
+  }
+
+  .benefitIcon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 1.35rem;
+  }
+
+  .benefitText {
+    font-size: 1.1rem;
+  }
+}
+
+/* 550px - 650px */
+@media screen and (min-width: 551px) and (max-width: 650px) {
+  .description {
+    font-size: 1.25rem;
+    width: 82%;
+    margin: 3% auto;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+    margin: 2.5% auto;
+    width: 95%;
+  }
+  
+  .markedTitle {
+    font-size: 1.9rem;
+    background-size: 100% 2.5px;
+    padding-bottom: 4px;
+  }
+  
+  .imageContainer {
+    width: 55%;
+    margin: 3% auto;
+  }
+  
+  .questionRow {
+    margin: 3% auto;
+    gap: 13px;
+    width: 95%;
+  }
+  
+  .iconContainer {
+    width: 50px;
+    height: 50px;
+  }
+
+  .highlightText {
+    font-size: 1.6rem;
+    width: 85%;
+  }
+
+  .guaranteeBox {
+    width: 90%;
+  }
+
+  .guaranteeHighlight {
+    font-size: 1.65rem;
+  }
+
+  .warningSection {
+    width: 90%;
+  }
+
+  .warningTitle {
+    font-size: 1.8rem;
+  }
+
+  .benefitsSection {
+    width: 90%;
+  }
+
+  .benefitsTitle {
+    font-size: 1.9rem;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 0;
+  }
+
+  .benefitIcon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    font-size: 1.4rem;
+  }
+}
+
+/* 650px - 750px */
+@media screen and (min-width: 651px) and (max-width: 750px) {
+  .description {
+    font-size: 1.3rem;
+    width: 80%;
+    margin: 2.5% auto;
+  }
+  
+  .title {
+    font-size: 2.3rem;
+    margin: 2.5% auto;
+    width: 95%;
+  }
+  
+  .markedTitle {
+    font-size: 2.1rem;
+    background-size: 100% 3px;
+    padding-bottom: 4px;
+  }
+  
+  .imageContainer {
+    width: 48%;
+    margin: 3% auto;
+  }
+  
+  .questionRow {
+    margin: 3% auto;
+    gap: 14px;
+    width: 95%;
+  }
+  
+  .iconContainer {
+    width: 55px;
+    height: 55px;
+  }
+
+  .highlightText {
+    font-size: 1.65rem;
+  }
+
+  .guaranteeHighlight {
+    font-size: 1.7rem;
+  }
+
+  .warningTitle {
+    font-size: 1.85rem;
+  }
+
+  .benefitsTitle {
+    font-size: 2rem;
+  }
+
+  .benefitsGrid {
+    gap: 18px;
+    padding: 0;
+  }
+
+  .benefitIcon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+  }
+}
+
+/* 750px - 850px */
+@media screen and (min-width: 751px) and (max-width: 850px) {
+  .description {
+    font-size: 1.35rem;
+    width: 78%;
+    margin: 2.5% auto;
+  }
+  
+  .title {
+    font-size: 2.4rem;
+    margin: 2.5% auto;
+    width: 95%;
+  }
+  
+  .markedTitle {
+    font-size: 2.2rem;
+    background-size: 100% 3px;
+    padding-bottom: 5px;
+  }
+  
+  .imageContainer {
+    width: 42%;
+    margin: 2.5% auto;
+  }
+  
+  .questionRow {
+    margin: 3% auto;
+    gap: 14px;
+    width: 95%;
+  }
+  
+  .iconContainer {
+    width: 60px;
+    height: 60px;
+  }
+
+  .highlightText {
+    font-size: 1.7rem;
+  }
+
+  .benefitsGrid {
+    gap: 18px;
+    padding: 0;
+  }
+
+  .benefitIcon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+  }
+
+  .benefitText {
+    font-size: 1.12rem;
+  }
+}
+
+/* 850px - 950px */
+@media screen and (min-width: 851px) and (max-width: 950px) {
+  .description {
+    font-size: 1.37rem;
+    width: 76%;
+    margin: 2% auto;
+  }
+  
+  .title {
+    font-size: 2.45rem;
+    margin: 2% auto;
+    width: 95%;
+  }
+  
+  .markedTitle {
+    font-size: 2.35rem;
+    background-size: 100% 3px;
+    padding-bottom: 5px;
+  }
+  
+  .imageContainer {
+    width: 38%;
+    margin: 2.5% auto;
+  }
+  
+  .questionRow {
+    margin: 3% auto;
+    gap: 15px;
+    width: 95%;
+  }
+  
+  .iconContainer {
+    width: 65px;
+    height: 65px;
+  }
+
+  .highlightText {
+    font-size: 1.75rem;
+  }
+
+  .benefitsGrid {
+    gap: 20px;
+    padding: 0;
+  }
+
+  .benefitIcon {
+    width: 54px;
+    height: 54px;
+    min-width: 54px;
+  }
+
+  .benefitText {
+    font-size: 1.15rem;
+  }
+}
+
+/* 950px - 1050px */
+@media screen and (min-width: 951px) and (max-width: 1050px) {
+  .description {
+    font-size: 1.38rem;
+    width: 75%;
+    margin: 2% auto;
+  }
+  
+  .title {
+    font-size: 2.48rem;
+    margin: 2% auto;
+    width: 95%;
+  }
+  
+  .markedTitle {
+    font-size: 2.4rem;
+    background-size: 100% 3px;
+    padding-bottom: 5px;
+  }
+  
+  .imageContainer {
+    width: 34%;
+    margin: 2% auto;
+  }
+  
+  .questionRow {
+    margin: 3% auto;
+    gap: 15px;
+    width: 95%;
+  }
+  
+  .iconContainer {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+/* 1050px - 1150px */
+@media screen and (min-width: 1051px) and (max-width: 1150px) {
+  .description {
+    font-size: 1.39rem;
+    width: 75%;
+    margin: 2% auto;
+  }
+  
+  .title {
+    font-size: 2.49rem;
+    margin: 2% auto;
+    width: 95%;
+  }
+  
+  .markedTitle {
+    font-size: 2.45rem;
+    background-size: 100% 3px;
+    padding-bottom: 5px;
+  }
+  
+  .imageContainer {
+    width: 32%;
+    margin: 2% auto;
+  }
+  
+  .questionRow {
+    margin: 3% auto;
+    gap: 15px;
+    width: 95%;
+  }
+  
+  .iconContainer {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* 1150px - 1250px */
+@media screen and (min-width: 1151px) and (max-width: 1250px) {
+  .description {
+    font-size: 1.4rem;
+    width: 75%;
+    margin: 2% auto;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin: 2% auto;
+    width: 95%;
+  }
+  
+  .markedTitle {
+    font-size: 2.5rem;
+    background-size: 100% 3px;
+    padding-bottom: 5px;
+  }
+  
+  .imageContainer {
+    width: 30%;
+    margin: 2% auto;
+  }
+  
+  .questionRow {
+    margin: 3% auto;
+    gap: 15px;
+    width: 95%;
+  }
+  
+  .iconContainer {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* מעל 1250px */
+@media screen and (min-width: 1251px) {
+  .description {
+    font-size: 1.4rem;
+    width: 75%;
+    margin: 2% auto;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin: 2% auto;
+  }
+  
+  .markedTitle {
+    font-size: 2.5rem;
+    background-size: 100% 3px;
+    padding-bottom: 5px;
+  }
+  
+  .imageContainer {
+    width: 25%;
+    margin: 2% auto;
+  }
+  
+  .questionRow {
+    margin: 3% auto;
+    gap: 15px;
+    width: 95%;
+  }
+  
+  .iconContainer {
+    width: 70px;
+    height: 70px;
+  }
+}

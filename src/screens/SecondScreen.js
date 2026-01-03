@@ -8,6 +8,7 @@ import IconTextComponent from "../components/can/Can";
 import learn from "../icons/wired-outline-2166-graduation-scroll-hover-pinch.json"
 
 import trip from "../icons/wired-outline-111-bagpack-hover-zip.json"
+import Works from "../components/recommends/Works";
 
 const SecondScreen = () => {
   const handleComplete = () => {

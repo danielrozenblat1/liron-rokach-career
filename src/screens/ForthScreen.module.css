@@ -157,7 +157,9 @@
       height: 45px;
     }
   }
-  
+  .background{
+    border-radius: 30px;
+  }
   /* 450px - 550px */
   @media screen and (min-width: 451px) and (max-width: 550px) {
     .description {

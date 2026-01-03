@@ -9,7 +9,7 @@ const AboutMe = () => {
       {/* חלק ראשון */}
       <section className={styles.sectionOne}>
         <div className={styles.contentBox}>
-          <h1 className={styles.mainTitle}>לירון רוקח</h1>
+          <h1 className={styles.mainTitle}>נעים מאוד, לירון רוקח</h1>
           <h2 className={styles.subTitle}>"עברתי את הדרך הארוכה בעצמי ועכשיו המטרה שלי היא לקצר אותה לאחרים"</h2>
           <div className={styles.description}>
           <p className={styles.descParagraph}>

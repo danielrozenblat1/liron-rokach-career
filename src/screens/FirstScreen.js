@@ -23,15 +23,15 @@ const HeroSection = () => {
             <h1 className={styles.title}>איך למצוא כיוון קריירה ברור בלי להמר על תחום ובלי לפחד מהבחירה</h1>
           </div>
 
-          {/* סרטון יוטיוב */}
+          {/* סרטון Vimeo */}
           <div className={styles.videoContainer}>
             <div className={styles.videoPlayer}>
               <iframe
-                className={styles.youtubePlayer}
-                src="https://www.youtube-nocookie.com/embed/mjTsQty_ADM?autoplay=1&mute=1&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3"
+                className={styles.vimeoPlayer}
+                src="https://player.vimeo.com/video/1150842285?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
                 title="Course Preview Video"
                 frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                 allowFullScreen
               ></iframe>
             </div>

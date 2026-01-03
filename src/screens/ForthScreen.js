@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react"
-import ContactForm from "../components/form/Form"
+import ContactForm from "../components/lightForm/Form"
 import SyllabusComponent from "../components/silabusss/Silabus"
 import EligibilitySection from "../components/whoFits/WhoFits"
 import FifthScreen from "./FifthScreen"
@@ -26,8 +26,8 @@ const ForthScreen=()=>{
 
 return <>
     <div className={styles.background}>
-        <FifthScreen/>
-    <div className={styles.description}>אבל אם הגעת לכאן סימן שבאמת אכפת לך לגבי העתיד שלך, אז בוא נדבר תכלס..</div>
+        {/* <FifthScreen/> */}
+    <div className={styles.description}> אם הגעת לכאן סימן שבאמת אכפת לך לגבי העתיד שלך, אז בוא נדבר תכלס..</div>
     <div className={styles.questionRow}>
       <div className={styles.iconContainer}>
         <Player
@@ -50,7 +50,7 @@ return <>
       </div>
     </div>
 <SyllabusComponent/>
-<Recommendations/>
+
 <Shorts/>
 <div className={styles.title}>וכדי להיות באמת בטוח שהתהליך בשבילך:</div>
 <EligibilitySection/>

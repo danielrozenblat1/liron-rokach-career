@@ -11,9 +11,12 @@ import result2 from "../../images/לירון רוקח המלצות 2.png";
 import result3 from "../../images/לירון רוקח המלצות 3.png";
 import result4 from "../../images/לירון רוקח המלצות 4.png";
 import result5 from "../../images/לירון רוקח המלצות 5.png";
+import result6 from "../../images/לירון רוקח הוכחה חברתית הודעות 1.png";
+import result7 from "../../images/לירון רוקח הוכחה חברתית הודעות 2.png";
+import result8 from "../../images/לירון רוקח הוכחה חברתית הודעות 3.png";
 const Recommendations = () => {
   const images = [
-    result1, result2, result3, result4, result5
+    result1, result2, result3, result4, result5, result6, result7, result8
   ];
 
   const sliderSettings = {
@@ -35,7 +38,7 @@ const Recommendations = () => {
 
   return (
     <>
-      <div className={styles.title}>קצת ממה שיש לאלה שעשו את הצעד לומר:</div>
+      {/* <div className={styles.title}>קצת ממה שיש לאלה שעשו את הצעד לומר:</div> */}
       <div className={styles.explain}>
       החליקו בין התמונות
       </div>

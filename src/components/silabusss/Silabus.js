@@ -11,7 +11,7 @@ import focus from "../../icons/wired-outline-2472-brain-mental-focus-hover-pinch
 import story from "../../icons/wired-outline-2344-poetry-hover-pinch.json"
 import eight from "../../icons/wired-outline-18-location-pin-in-roll-calm.json"
 
-const SessionCard = ({ day, title, description, icon }) => {
+const BenefitCard = ({ title, icon }) => {
   const playerRef = useRef(null);
   
   const handleComplete = () => {
@@ -20,7 +20,6 @@ const SessionCard = ({ day, title, description, icon }) => {
 
   return (
     <div className={styles.card}>
-      <div className={styles.dayBadge}>מפגש {day}</div>
       <div className={styles.content}>
         <div className={styles.iconWrapper}>
           <div className={styles.icon}>
@@ -28,8 +27,7 @@ const SessionCard = ({ day, title, description, icon }) => {
           </div>
         </div>
         <div className={styles.textContent}>
-          <h3 className={styles.title}>{title}</h3>
-          <p className={styles.description}>{description}</p>
+          <p className={styles.benefitText}>{title}</p>
         </div>
       </div>
     </div>
@@ -43,37 +41,38 @@ const SyllabusComponent = () => {
     // Handle animation complete if needed
   };
   
-  // Icons should be imported or defined as needed
-  // These are placeholders - you'll need to replace with actual lordicon JSON objects
-  const searchIcon = mess
-  const mapIcon = map
-  const compassIcon = directions
-  const mountainIcon = dig
-  
-  const sessions = [
+  const benefits = [
     {
-      day: 1,
-      title: 'עושים סדר בבלגן',
-      description: 'בוא נבין יחד מה חשוב לך, מה מניע אותך, ומה כבר לא מעניין אותך. זו ההתחלה של לגלות מי אתה באמת – בלי פילטרים.',
-      icon: searchIcon
+      title: 'ליווי של 8 שבועות + פגישות ייעוץ ודיוק פעם בשבוע',
+      icon: medal
     },
     {
-      day: 2,
-      title: 'מפה אישית לקריירה',
-      description: 'נאסוף את כל מה שגילינו ונגלה מה הכיוונים שמדליקים אותך באמת. נחבר את כל החלקים למסר אחד ברור: מי אתה, מה אתה מחפש, ומה הכי מתאים לך.',
-      icon: mapIcon
+      title: 'הבנה עמוקה של החוזקות והערך שלך בשוק',
+      icon: medal
     },
     {
-      day: 3,
-      title: 'בוחנים כיוונים אמיתיים ומתמקדים',
-      description: 'תבחר 2–3 כיוונים תעסוקתיים שמרגשים אותך. נבחן אותם מכל זווית: למה זה מעניין אותך, מה מושך שם, ומה אתה צריך לבדוק. נצלול עמוק יותר לתוך הכיוונים שבחרת, ננתח אותם מול מי שאתה באמת – ונבחר יחד את הכיוון הכי מדויק עבורך.',
-      icon: compassIcon
+      title: 'כיוון תעסוקתי ברור ומדויק אליך באופן אישי שלא מרגיש כמו הימור',
+      icon: medal
     },
     {
-      day: 4,
-      title: 'יוצאים לבדוק את השטח והסיפור שלך נכתב',
-      description: 'נחקור את התחום שבחרת: איך הוא נראה באמת, איזה אתגרים מחכים לך, מה התנאים, ואיפה אפשר להתחיל. נסכם את כל מה שעברת – ונבנה יחד חזון אישי ומרגש לחיים המקצועיים שלך בעוד 3–5 שנים. עם משמעות, מוטיבציה, ושקט פנימי שאתה בדרך שלך.',
-      icon: mountainIcon
+      title: 'מענה 24/7 בוואטסאפ',
+      icon: medal
+    },
+    {
+      title: 'אימון מנטלי להעלאת מוטיבציה',
+      icon: medal
+    },
+    {
+      title: 'עצמאות בקבלת החלטות קדימה',
+      icon: medal
+    },
+    {
+      title: 'אימון מנטלי שמפסיק לנהל אותך דרך פחד',
+      icon: medal
+    },
+    {
+      title: 'תכנית פעולה אישית שמלווה אותך 3 שנים קדימה',
+      icon: medal
     },
   ];
 
@@ -82,29 +81,17 @@ const SyllabusComponent = () => {
       <div className={styles.header}>
         <div className={styles.calendarIconWrapper}>
           <div className={styles.icon}>
-            <Player icon={map} ref={playerRef} size="100%" loop={true} onComplete={handleComplete}></Player>
+            <Player icon={story} ref={playerRef} size="100%" loop={true} onComplete={handleComplete}></Player>
           </div>
         </div>
-        <h1 className={styles.mainTitle}>4 מפגשים ואתה ביעד!</h1>
-      </div>
-      <div className={styles.progressBar}>
-        <div className={styles.progressFill}></div>
-        <div className={styles.progressSteps}>
-          {[1, 2, 3, 4].map((step) => (
-            <div key={step} className={styles.progressStep}>
-              <span className={styles.stepNumber}>{step}</span>
-            </div>
-          ))}
-        </div>
+        <h1 className={styles.mainTitle}>מה מקבלים?</h1>
       </div>
       <div className={styles.cardsContainer}>
-        {sessions.map((session) => (
-          <SessionCard
-            key={session.day}
-            day={session.day}
-            title={session.title}
-            description={session.description}
-            icon={session.icon}
+        {benefits.map((benefit, index) => (
+          <BenefitCard
+            key={index}
+            title={benefit.title}
+            icon={benefit.icon}
           />
         ))}
       </div>

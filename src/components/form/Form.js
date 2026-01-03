@@ -77,7 +77,7 @@ const ContactForm = () => {
 
   return (
     <div className={styles.formContainer} id="טופס">
-      <h2 className={styles.title}>השאר פרטים לשיחת ייעוץ ללא עלות</h2>
+      <h2 className={styles.title}>השאר פרטים לבדיקת התאמה ללא עלות</h2>
       <form className={styles.form} onSubmit={handleSubmit}>
         <input
           type="text"

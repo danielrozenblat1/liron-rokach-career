@@ -8,6 +8,7 @@ import SyllabusComponent from './components/silabusss/Silabus';
 import NavBarNew from './CourseNav/NavBarNew';
 import HeroSection from './screens/FirstScreen';
 import ForthScreen from './screens/ForthScreen';
+import SecondScreenNew from './screens/NewSecondScreen';
 import SecondScreen from './screens/SecondScreen';
 import SixthScreen from './screens/SixthScreen';
 import ThirdScreen from './screens/ThirdScreen';
@@ -16,8 +17,8 @@ function App() {
   return <>
   <NavBarNew/>
   <HeroSection/>
-  <SecondScreen/>
-  <ThirdScreen/>
+  <SecondScreenNew/>
+  {/* <ThirdScreen/> */}
   <AboutMe/>
  <ForthScreen/>
  <SixthScreen/>
